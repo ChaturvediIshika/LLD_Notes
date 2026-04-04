@@ -14,7 +14,7 @@ class Singleton{
     public void setData(String s){
         logs.add(s);
     }
-    public List getData(){
+    public ArrayList<String> getData(){
         return logs;
     }
 }
