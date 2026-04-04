@@ -1,7 +1,7 @@
 interface PaymentType{
     public void pay(int amt);
 }
-class upiPayment implements PaymentType{
+class upiPayment implements PaymentType{ //Products
     @Override
     public void pay(int amt){
         System.out.println("payement of "+amt+" is done using upi");
@@ -25,7 +25,7 @@ class wrongPayment implements PaymentType{
         throw new Error("wrong payment method");
     }
 }
-class Factory{
+class Factory{ //Factory
     public static PaymentType getPayment(String type){
         switch(type){
             case "upi":
@@ -39,7 +39,7 @@ class Factory{
         }
     }
 }
-class Payment{
+class Payment{ //client
     public static void main(String args[]){
         PaymentType client = Factory.getPayment("upi");
         client.pay(300);

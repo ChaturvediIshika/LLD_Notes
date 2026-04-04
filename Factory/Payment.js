@@ -4,7 +4,7 @@ class upiPayment {
     }
 };
 
-class cardPayment {
+class cardPayment { //Products
     pay(amount){
         console.log(`Payment done using card for ${amount}`);
     }
@@ -22,7 +22,7 @@ class wrongPayment {
     }
 }
 
-class paymentFactory { 
+class paymentFactory { //Factory
     static paymentType(type){
         switch(type){
             case 'upi':
@@ -37,5 +37,5 @@ class paymentFactory {
     }
 }
 
-const paymentClient = paymentFactory.paymentType('netBanking');
+const paymentClient = paymentFactory.paymentType('netBanking'); //Client
 paymentClient.pay(300);
